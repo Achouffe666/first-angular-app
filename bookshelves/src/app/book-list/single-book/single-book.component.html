@@ -1,0 +1,16 @@
+<div class="card mb-3 mt-5" style="max-width: 800px;">
+<div class="row g-0">
+	<div class="col-md-5">
+		<img style="width: 100%; height: 100%;" *ngIf="book.photo" [src]="book.photo">
+	</div>
+		<div class="card-body col-md-7">
+		<h2 class="card-title title">{{book.title}}</h2>
+		<p class="card-text">{{book.description}}</p>
+		<div class="card-footer book-footer">
+		<h3 class="text-muted author">By: {{book.author}}</h3>
+		<p class="text-muted date">Created on: {{book.date }}</p>
+		</div>
+	</div>
+</div>
+</div>
+<button class="btn btn-default" (click)="onBack()">Retour</button>

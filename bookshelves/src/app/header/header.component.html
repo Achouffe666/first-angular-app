@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid">
+		<ul class="nav navbar-nav">
+			<li routerLinkActive="active" class="nav-item">
+				<a routerLink="books" class="navbar-brand">Livres</a>
+			</li>
+		</ul>
+		<ul class="navbar-nav navbar-right">
+			<li routerLinkActive="active" *ngIf="!isAuth" class="nav-item">
+				<a routerLink="auth/signup" class="nav-link"> Créer un compte</a>
+			</li>
+			<li routerLinkActive="active" *ngIf="!isAuth" class="nav-item">
+				<a routerLink="auth/signin" class="nav-link"> Connexion</a>
+			</li>
+			<li *ngIf="isAuth" class="navbar-brand mr-5 welcome">Welcome,<span class="ml-2">{{userName}}</span></li>
+			<li (click)="onSignOut()" *ngIf="isAuth" style="cursor: pointer">Déconnexion</li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "bookshelves-216b6": {
+      "hosting": {
+        "bookshelves": [
+          "bookshelves-216b6"
+        ]
+      }
+    }
+  }
+}
